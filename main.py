@@ -16,7 +16,7 @@ headers = {
     "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36"
 }
 titleData = ["id","Store page link", "Product item page link", "Store_name", "Category", "Product_description", "Product Name", "Weight/Quantity", "Units/Counts", "Price", "image_file_names", "Image_Link", "Store Rating", "Store Review number", "Product Rating", "Product Review number", "Address", "Phone number", "Latitude", "Longitude", "Description Detail", "SubCategory"]
-widths = [30,50,50,60,45,70,35,25,25,20,130,130,30,30,30,30,60,50,60,60,80,60]
+widths = [10,50,50,60,45,70,35,25,25,20,130,130,30,30,30,30,60,50,60,60,80,60]
 style = xlwt.easyxf('font: bold 1; align: horiz center')
 
 response = requests.get("https://partnersapi.gethomesome.com/product/list?shortList=true", headers=headers, json={})

@@ -15,8 +15,8 @@ headers = {
     "pricelist": "9D51AB88-A56E-4F7E-A6BE-16854A976FAE",
     "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36"
 }
-titleData = ["id", "Product_Name", "Download_URL", "Image_URL", "Price", "Unit", "Type", "SubType"]
-widths = [30,100,120,120,30,50,60,60]
+titleData = ["id","Store page link", "Product item page link", "Store_name", "Category", "Product_description", "Product Name", "Weight/Quantity", "Units/Counts", "Price", "image_file_names", "Image_Link", "Store Rating", "Store Review number", "Product Rating", "Product Review number", "Address", "Phone number", "Latitude", "Longitude", "Description Detail", "SubCategory"]
+widths = [30,50,50,60,45,70,35,25,25,20,130,130,30,30,30,30,60,50,60,60,80,60]
 style = xlwt.easyxf('font: bold 1; align: horiz center')
 
 response = requests.get("https://partnersapi.gethomesome.com/product/list?shortList=true", headers=headers, json={})
@@ -52,12 +52,26 @@ for product in products:
                 print(e)
         record = [
             str(section_id),
+            "",
+            "",
+            "",
+            product["type"],
+            "",
             product["displayName"],
+            product["unitQuantity"],
+            product["unit"],
+            product["price"],
             download_url,
             image_url,
-            product["price"],
-            product["unit"],
-            product["type"],
+            "",
+            "",
+            "",
+            "",
+            "3428 North University Drive Sunrise, FL 33351",
+            "+1(954)742-3004",
+            "",
+            "",
+            "",
             product["subType"]
         ]
         print(record)

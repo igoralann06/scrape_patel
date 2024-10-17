@@ -52,9 +52,9 @@ for product in products:
                 print(e)
         record = [
             str(section_id),
-            "",
-            "",
-            "",
+            "https://shop.patelbros.com",
+            "https://shop.patelbros.com/shop/"+product["type"]+"?subcategory="+product["subType"],
+            "Patel Brothers",
             product["type"],
             "",
             product["displayName"],
@@ -69,8 +69,8 @@ for product in products:
             "",
             "3428 North University Drive Sunrise, FL 33351",
             "+1(954)742-3004",
-            "",
-            "",
+            "26.17042574238772",
+            "-80.25393490216432",
             "",
             product["subType"]
         ]
